@@ -1,0 +1,13 @@
+# Spin up Docker Container
+docker run --name demo-celery-redis -d -p 6379:6379 -t redis
+
+# Show Worker with Child Process (Won't work on Windows)
+celery worker --loglevel=info
+
+# Spin up Worker
+celery worker -l info -P eventlet
+
+
+
+
+

@@ -1,0 +1,30 @@
+concurrent = 1
+check_interval = 0
+
+[[runners]]
+  name = "DevOps Demo Gitlab Runner"
+  url = "https://naopsgit.exu.ericsson.se/"
+  token = "3axxcKxohYkAf_q9G-_s"
+  executor = "docker"
+  [runners.docker]
+    tls_verify = false
+    image = "docker:stable"
+    privileged = false
+    disable_cache = false
+    volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/cache"]
+    shm_size = 0
+  [runners.cache]
+
+[[runners]]
+  name = "DevOps Demo Gitlab Runner"
+  url = "https://naopsgit.exu.ericsson.se/"
+  token = "9pseUYrCyRma1hj_72jH"
+  executor = "docker"
+  [runners.docker]
+    tls_verify = false
+    image = "docker:stable"
+    privileged = false
+    disable_cache = false
+    volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/cache"]
+    shm_size = 0
+  [runners.cache]
